@@ -10,8 +10,12 @@ describe 'Caesar Cipher' do
             expect(caesar_cipher('s', 5)).to eql('x')
         end
 
-        it 'it works with any letter casing' do
+        it 'works with any letter casing' do
             expect(caesar_cipher('HeLLo', 3)).to eql('KhOOr')
+        end
+
+        it 'wraps from z to a' do
+            expect(caesar_cipher('y', 8)).to eql('g')
         end
     end
 end
