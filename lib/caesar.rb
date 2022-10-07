@@ -39,4 +39,4 @@ def caesar_cipher(string, factor)
     puts ciphered_string
     return ciphered_string
 end
-caesar_cipher("s", 5)
+caesar_cipher('world', 50)

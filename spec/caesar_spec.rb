@@ -17,5 +17,13 @@ describe 'Caesar Cipher' do
         it 'wraps from z to a' do
             expect(caesar_cipher('y', 8)).to eql('g')
         end
+
+        it 'works with punctuation' do
+            expect(caesar_cipher('What A String!', 5)).to eql('Bmfy F Xywnsl!')
+        end
+
+        it 'works with large shift factor' do
+            expect(caesar_cipher('world', 50)).to eql('umpjb')
+        end
     end
 end
